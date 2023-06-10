@@ -6,10 +6,10 @@ const defaultTime = {
 
 
 App({
-  onLaunch: function() {
+  onLaunch: function () {
     let workTime = wx.getStorageSync('workTime')
     let restTime = wx.getStorageSync('restTime')
-    
+
     if (!workTime) {
       wx.setStorage({
         key: 'workTime',

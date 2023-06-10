@@ -1,0 +1,106 @@
+{
+  "useExtendedLib": {
+  "weui": true
+},
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/setting/setting",
+    "pages/setting/rank/rank",
+    "pages/setting/setmore/setmore",
+    "pages/about/about",
+    "pages/more/more",
+    "pages/group/group",
+    "pages/todos/todos",
+    "pages/category/category",
+    "pages/poster/poster",
+    "pages/xuangu/xuangu",
+    "pages/catalog/catalog",
+    "pages/version/version"
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wxe333b834a643f99d",
+    "wx8abaf00ee8c3202e"
+  ],    
+  "requiredBackgroundModes": ["audio","location"],
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EDEDED",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+   }, 
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7f7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/yu.png",
+        "selectedIconPath": "image/yu2.png",
+        "text": "专注"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "iconPath": "image/todo2.png",
+        "selectedIconPath": "image/todo.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/todos/todos",
+        "iconPath": "image/todo2.png",
+        "selectedIconPath": "image/todo.png",
+        "text": "待办"
+      },
+      {
+        "pagePath": "pages/xuangu/xuangu",
+        "iconPath": "image/rank.png",
+        "selectedIconPath": "image/rank.png",
+        "text": "选股"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "image/jilu.png",
+        "selectedIconPath": "image/jilu2.png",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "image/shezhi.png",
+        "selectedIconPath": "image/shezhi2.png",
+        "text": "我"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "lib/vant-weapp/button/index",
+    "van-dialog": "lib/vant-weapp/dialog/index",
+    "van-field": "lib/vant-weapp/field/index",
+    "van-tab": "lib/vant-weapp/tab/index",
+    "van-tabs": "lib/vant-weapp/tabs/index",
+    "van-loading": "lib/vant-weapp/loading/index",
+    "van-checkbox": "lib/vant-weapp/checkbox/index",
+    "van-icon": "lib/vant-weapp/icon/index",
+    "van-search": "lib/vant-weapp/search/index",
+    "van-toast": "lib/vant-weapp/toast/index",
+    "van-tag": "lib/vant-weapp/tag/index",
+    "van-cell": "lib/vant-weapp/cell/index",
+    "van-cell-group": "lib/vant-weapp/cell-group/index",
+    "van-popup": "lib/vant-weapp/popup/index",
+    "van-area": "lib/vant-weapp/area/index",
+    "van-steps": "lib/vant-weapp/steps/index",
+    "van-switch": "lib/vant-weapp/switch/index",
+    "wux-toptips": "lib/wux-weapp/toptips/index",
+    "wux-filterbar": "lib/wux-weapp/filterbar/index",
+    "wux-upload": "lib/wux-weapp/upload/index",
+    "i-icon": "lib/iview-weapp/icon/index",
+    "i-badge": "lib/iview-weapp/badge/index",
+    "i-input-number": "lib/iview-weapp/input-number/index",
+    "i-swipeout": "lib/iview-weapp/swipeout/index",
+    "i-avatar": "lib/iview-weapp/avatar/index",
+    "i-rate": "lib/iview-weapp/rate/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

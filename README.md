@@ -26,3 +26,10 @@ UFund微信小程序: 自选基金助手、策略选股、股票盯盘、量化�
 ![gh_001c380131f9)](https://github.com/UFund-Me/UFund-miniprogram/assets/29084184/8b30513e-82a6-401c-95b5-c33b4aa18a6e)
 
 </div>
+
+
+## Reference
+
+https://github.com/Exrick/xmall-weapp
+
+https://github.com/vace/wechatapp-news-reader

@@ -32,5 +32,5 @@
       </view>
     </view>
   </view>
-  <ad unit-id="adunit-8dfcef1086440f99" ad-type="video" ad-theme="white"></ad>
+  <!-- <ad unit-id="adunit-8dfcef1086440f99" ad-type="video" ad-theme="white"></ad> -->
 </view>

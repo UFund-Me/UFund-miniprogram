@@ -60,11 +60,16 @@
     </view>
   </view>
 
-
-
-
   <view class="weui-cells__title"></view>
   <view class="weui-cells weui-cells_after-title">
+    <navigator url="../logs/logs" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="../../image/jilu2.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+      </view>
+      <view class="weui-cell__bd">我的记录</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+
     <navigator url="../setting/rank/rank" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
       <view class="weui-cell__hd">
         <image src="../../image/rank.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
