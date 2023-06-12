@@ -45,8 +45,8 @@ UFund微信小程序: 自选基金助手、策略选股、股票盯盘、量化�
 
 <img src="https://github.com/UFund-Me/UFund-miniprogram/assets/29084184/3687efc9-4bee-4923-b9c8-f8047995eef4" height="240" alt="微信打赏" width=“”/>
 
-<a href="https://github.com/sponsors/Charmve/">
-  <img src="https://github.com/UFund-Me/Qbot/assets/29084184/b795fe7b-f988-42b5-9060-b6fb8d9d6814" width=“200px” alt="GitHub Sponsor">
+<a href="https://github.com/sponsors/Charmve">
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/29084184/241991784-b795fe7b-f988-42b5-9060-b6fb8d9d6814.png" width=“200px” alt="GitHub Sponsor">
 </a>
 </div>
 
