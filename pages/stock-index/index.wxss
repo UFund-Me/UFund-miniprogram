@@ -1,0 +1,45 @@
+.price-up {
+  color: #f5222d;
+}
+
+.price-down {
+  color: #52c41a;
+}
+
+.stock-index-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30px;
+}
+
+.stock-index-title .left {
+  flex: 1;
+}
+
+.stock-index-title .right {
+  margin-right: 10px;
+}
+
+.stock-index-title .new-price {
+  text-align: right;
+}
+
+.stock-index-title .change-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100px;
+}
+
+.stock-index-title .change-info-item {
+  display: inline;
+  margin-left: 10px;
+}
+
+.change-info-list .change-info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+

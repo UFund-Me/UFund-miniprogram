@@ -1,0 +1,13 @@
+# 编辑器
+.idea
+.vscode
+
+# 依赖
+node_modules
+miniprogram_npm
+dist
+.DS_Store
+
+# 其他
+.vscode-test
+  

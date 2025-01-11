@@ -4,6 +4,4 @@ function formatTime(time, format) {
   return temp.substr(-len)
 }
 
-module.exports = {
-  formatTime: formatTime
-}
+export { formatTime }

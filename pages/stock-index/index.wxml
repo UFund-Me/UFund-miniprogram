@@ -1,0 +1,42 @@
+<!-- 工具函数 -->
+<wxs src="../../utils/util.wxs" module="util" />
+<!-- 指数列表 -->
+<view class="stock-index-page">
+  <van-collapse value="{{ activeCodes }}" bind:change="handleCodeChange">
+    <block wx:for="{{ list }}" wx:key="index">
+      <van-collapse-item name="{{ item.code }}">
+        <view slot="title" class="stock-index-title">
+          <view class="left">
+            <view class="name">{{ item.name }}</view>
+            <view class="code">{{ item.code }}</view>
+          </view>
+          <view class="right">
+            <view class="new-price {{ util.getPriceClass(item.latest.newPrice, item.latest.preClosePrice) }}">
+              {{ item.latest.newPrice }}
+            </view>
+            <view class="change-info">
+              <text class="change-info-item {{ util.getPriceClass(item.latest.upsDowns, item.latest.preClosePrice) }}">
+                {{ item.latest.upsDowns }}
+              </text>
+              <text class="change-info-item">{{ item.latest.changeRate }}</text>
+            </view>
+          </view>
+        </view>
+        <view class="change-info-list">
+          <view class="change-info-row">
+            <text class="change-info-item">今开: {{ item.latest.openPrice }}</text>
+            <text class="change-info-item">昨收: {{ item.latest.preClosePrice }}</text>
+          </view>
+          <view class="change-info-row">
+            <text class="change-info-item">最高: {{ item.latest.highPrice }}</text>
+            <text class="change-info-item">最低: {{ item.latest.lowPrice }}</text>
+          </view>
+          <view class="change-info-row">
+            <text class="change-info-item">换手: {{ item.latest.turnoverRate }}</text>
+            <text class="change-info-item">振幅: {{ item.latest.amplitude }}</text>
+          </view>
+        </view>
+      </van-collapse-item>
+    </block>
+  </van-collapse>
+</view>

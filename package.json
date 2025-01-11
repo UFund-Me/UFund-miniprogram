@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "ufund-miniprogram",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "weui-miniprogram": "^1.0.7"
+    "@vant/weapp": "^1.11.7"
   }
 }

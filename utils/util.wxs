@@ -1,0 +1,11 @@
+function getPriceClass(newPrice, preClosePrice) {
+  if (!newPrice || !preClosePrice) return ''
+  var diff = parseFloat(newPrice) - parseFloat(preClosePrice)
+  if (diff > 0) return 'price-up'
+  if (diff < 0) return 'price-down'
+  return ''
+}
+
+module.exports = {
+  getPriceClass: getPriceClass
+}
