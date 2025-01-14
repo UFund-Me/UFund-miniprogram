@@ -1,4 +1,8 @@
 {
-  "navigationBarTitleText": "股票行情",
-  "usingComponents": {}
+  "navigationBarTitleText": "UFund - 股票行情",
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-collapse": "@vant/weapp/collapse/index"
+  }
 }

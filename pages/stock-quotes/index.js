@@ -1,66 +1,53 @@
-// pages/stock-quotes/index.js
+import Toast from "@vant/weapp/toast/toast";
+
+import { getStockQuotes } from "../../api/stock";
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
+    // 股票列表
+    list: [],
 
+    // 当前选中的股票
+    activeCodes: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow() {
-
+    this.init();
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
+  handleCodeChange(e) {
+    this.setData({
+      activeCodes: e.detail
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
+  init() {
+    Toast.loading({
+      forbidClick: true
+    });
 
+    getStockQuotes()
+      .then(res => {
+        if (!res.success) {
+          Toast.fail("获取股票行情失败");
+        }
+
+        this.setData({
+          list: res.data,
+          activeCodes: [res.data[0].code]
+        });
+
+        Toast.clear();
+      })
+      .catch(() => {
+        Toast.clear();
+      });
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage() {
-
+    return {
+      title: "UFund - 股票行情",
+      path: "/pages/stock-quotes/index"
+    };
   }
-})
+});

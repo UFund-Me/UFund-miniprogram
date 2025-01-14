@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "股票指数",
+  "navigationBarTitleText": "UFund - 股票指数",
   "usingComponents": {
     "van-toast": "@vant/weapp/toast/index",
     "van-collapse-item": "@vant/weapp/collapse-item/index",

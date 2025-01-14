@@ -10,7 +10,7 @@ Page({
     activeCodes: []
   },
 
-  onLoad() {
+  onShow() {
     this.init();
   },
 
@@ -21,6 +21,10 @@ Page({
   },
 
   init() {
+    Toast.loading({
+      forbidClick: true
+    });
+
     getStockIndex().then(res => {
       if (!res.success) {
         Toast.fail("获取指数失败");
@@ -30,8 +34,15 @@ Page({
         list: res.data,
         activeCodes: [res.data[0].code]
       });
+
+      Toast.clear();
     });
   },
 
-  onShareAppMessage() {}
+  onShareAppMessage() {
+    return {
+      title: "UFund - 股票指数",
+      path: "/pages/stock-index/index"
+    };
+  }
 });

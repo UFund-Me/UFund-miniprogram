@@ -1,7 +1,4 @@
 {
-  "useExtendedLib": {
-    "weui": true
-  },
   "pages": ["pages/stock-index/index", "pages/stock-quotes/index"],
   "requiredBackgroundModes": ["audio", "location"],
   "window": {
@@ -15,17 +12,14 @@
     "selectedColor": "#000000",
     "borderStyle": "black",
     "backgroundColor": "#f7f7f7",
+    "position": "top",
     "list": [
       {
         "pagePath": "pages/stock-index/index",
-        "iconPath": "image/home.png",
-        "selectedIconPath": "image/home2.png",
         "text": "指数"
       },
       {
         "pagePath": "pages/stock-quotes/index",
-        "iconPath": "image/home.png",
-        "selectedIconPath": "image/home2.png",
         "text": "行情"
       }
     ]

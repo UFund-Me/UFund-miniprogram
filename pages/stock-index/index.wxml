@@ -1,5 +1,7 @@
 <!-- 工具函数 -->
 <wxs src="../../utils/util.wxs" module="util" />
+<!-- 组件 -->
+<van-toast id="van-toast" />
 <!-- 指数列表 -->
 <view class="stock-index-page">
   <van-collapse value="{{ activeCodes }}" bind:change="handleCodeChange">
@@ -15,24 +17,34 @@
               {{ item.latest.newPrice }}
             </view>
             <view class="change-info">
-              <text class="change-info-item {{ util.getPriceClass(item.latest.upsDowns, item.latest.preClosePrice) }}">
+              <span class="change-info-item {{ util.getPriceClass(item.latest.newPrice, item.latest.preClosePrice) }}">
                 {{ item.latest.upsDowns }}
-              </text>
-              <text class="change-info-item">{{ item.latest.changeRate }}</text>
+              </span>
+              <span class="change-info-item {{ util.getPriceClass(item.latest.newPrice, item.latest.preClosePrice) }}">
+                {{ item.latest.changeRate }}
+              </span>
             </view>
           </view>
         </view>
         <view class="change-info-list">
           <view class="change-info-row">
-            <text class="change-info-item">今开: {{ item.latest.openPrice }}</text>
-            <text class="change-info-item">昨收: {{ item.latest.preClosePrice }}</text>
+            <span class="change-info-item {{ util.getPriceClass(item.latest.openPrice, item.latest.preClosePrice) }}">
+              今开: {{ item.latest.openPrice }}
+            </span>
+            <span class="change-info-item {{ util.getPriceClass(item.latest.preClosePrice, item.latest.preClosePrice) }}">
+              昨收: {{ item.latest.preClosePrice }}
+            </span>
           </view>
           <view class="change-info-row">
-            <text class="change-info-item">最高: {{ item.latest.highPrice }}</text>
-            <text class="change-info-item">最低: {{ item.latest.lowPrice }}</text>
+            <span class="change-info-item {{ util.getPriceClass(item.latest.highPrice, item.latest.preClosePrice) }}">
+              最高: {{ item.latest.highPrice }}
+            </span>
+            <span class="change-info-item {{ util.getPriceClass(item.latest.lowPrice, item.latest.preClosePrice) }}">
+              最低: {{ item.latest.lowPrice }}
+            </span>
           </view>
           <view class="change-info-row">
-            <text class="change-info-item">换手: {{ item.latest.turnoverRate }}</text>
+            <span class="change-info-item">换手: {{ item.latest.turnoverRate }}</span>
             <text class="change-info-item">振幅: {{ item.latest.amplitude }}</text>
           </view>
         </view>
