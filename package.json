@@ -5,8 +5,11 @@
   "main": "app.js",
   "scripts": {},
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "dependencies": {
     "@vant/weapp": "^1.11.7"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^2.12.0"
   }
 }

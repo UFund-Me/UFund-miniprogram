@@ -1,0 +1,49 @@
+.price-up {
+  color: #f5222d;
+}
+
+.price-down {
+  color: #52c41a;
+}
+
+.stock-index-title {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+
+  .left {
+    flex: 1;
+  }
+
+  .right {
+    margin-right: 10px;
+  }
+
+  .new-price {
+    text-align: right;
+  }
+
+  .change-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100px;
+  }
+
+  .change-info-item {
+    display: inline;
+    margin-left: 10px;
+  }
+}
+
+.change-info-list {
+  padding: 0 10px;
+
+  .change-info-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 30px;
+  }
+}

@@ -1,20 +1,20 @@
 import Toast from "@vant/weapp/toast/toast";
-
 import { getStockIndex } from "../../api/stock";
+
 
 Page({
   data: {
     // 指数列表
-    list: [],
+    list: [] as Stock.StockIndex[],
     // 当前选中的指数
-    activeCodes: []
+    activeCodes: [] as string[]
   },
 
   onShow() {
     this.init();
   },
 
-  handleCodeChange(e) {
+  handleCodeChange(e: any) {
     this.setData({
       activeCodes: e.detail
     });
@@ -25,7 +25,7 @@ Page({
       forbidClick: true
     });
 
-    getStockIndex().then(res => {
+    getStockIndex().then((res) => {
       if (!res.success) {
         Toast.fail("获取指数失败");
       }

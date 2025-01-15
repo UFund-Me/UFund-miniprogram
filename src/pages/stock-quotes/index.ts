@@ -1,21 +1,21 @@
 import Toast from "@vant/weapp/toast/toast";
-
 import { getStockQuotes } from "../../api/stock";
+
 
 Page({
   data: {
     // 股票列表
-    list: [],
+    list: [] as Stock.StockQuotes[],
 
     // 当前选中的股票
-    activeCodes: []
+    activeCodes: [] as string[]
   },
 
   onShow() {
     this.init();
   },
 
-  handleCodeChange(e) {
+  handleCodeChange(e: any) {
     this.setData({
       activeCodes: e.detail
     });
