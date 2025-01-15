@@ -1,3 +1,5 @@
+import { StockIndex } from "stock";
+
 import Toast from "@vant/weapp/toast/toast";
 import { getStockIndex } from "../../api/stock";
 
@@ -5,7 +7,7 @@ import { getStockIndex } from "../../api/stock";
 Page({
   data: {
     // 指数列表
-    list: [] as Stock.StockIndex[],
+    list: [] as StockIndex[],
     // 当前选中的指数
     activeCodes: [] as string[]
   },

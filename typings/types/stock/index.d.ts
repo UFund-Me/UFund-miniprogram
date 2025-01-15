@@ -1,4 +1,4 @@
-declare namespace Stock {
+declare module 'stock' {
   interface StockRealtime {
     amplitude: number
     basicEps: number

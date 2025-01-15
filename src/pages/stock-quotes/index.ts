@@ -1,3 +1,5 @@
+import { StockQuotes } from "stock";
+
 import Toast from "@vant/weapp/toast/toast";
 import { getStockQuotes } from "../../api/stock";
 
@@ -5,7 +7,7 @@ import { getStockQuotes } from "../../api/stock";
 Page({
   data: {
     // 股票列表
-    list: [] as Stock.StockQuotes[],
+    list: [] as StockQuotes[],
 
     // 当前选中的股票
     activeCodes: [] as string[]
