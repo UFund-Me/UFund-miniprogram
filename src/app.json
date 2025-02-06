@@ -20,6 +20,28 @@
       "sdkVersionEnd": "15.255.255"
     }
   },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#f85a57",
+    "list": [
+      {
+        "pagePath": "pages/echarts-demo/index",
+        "text": "Echarts"
+      },
+      {
+        "pagePath": "pages/stock-index/index",
+        "text": "指数",
+        "iconPath": "assets/stock_index.png",
+        "selectedIconPath": "assets/stock_index_active.png"
+      },
+      {
+        "pagePath": "pages/stock-quotes/index",
+        "text": "行情",
+        "iconPath": "assets/stock_quotes.png",
+        "selectedIconPath": "assets/stock_quotes_active.png"
+      }
+    ]
+  },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
