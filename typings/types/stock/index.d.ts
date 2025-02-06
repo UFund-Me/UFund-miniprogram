@@ -55,13 +55,11 @@ declare module 'stock' {
     code: string
     name: string;
     latest: StockIndexItem,
-    trends: StockIndexItem[]
   }
 
   interface StockQuotes {
     code: string
     name: string;
     latest: StockQuotesItem,
-    trends: StockQuotesItem[]
   }
 }
