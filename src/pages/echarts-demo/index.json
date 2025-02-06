@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "ECharts 示例",
   "usingComponents": {
     "ec-charts": "../../components/ec-charts/index"
   }

@@ -1,4 +1,4 @@
 <!-- index.wxml -->
 <view class="container">
-  <ec-charts option="{{ option }}"></ec-charts>
+  <ec-charts padding="{{ 10 }}" option="{{ option }}"></ec-charts>
 </view>

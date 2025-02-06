@@ -1,4 +1,3 @@
-
 Page({
   data: {
     option: null
@@ -7,27 +6,23 @@ Page({
   onLoad() {
     setTimeout(() => {
       this.setChartOption();
-    }, 3000);
+    }, 300);
   },
 
   setChartOption() {
     const option = {
-      title: {
-        text: 'ECharts 入门示例'
-      },
-      tooltip: {},
       xAxis: {
-        type: 'category',
+        type: "category",
         boundaryGap: false,
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
       },
       yAxis: {
-        type: 'value'
+        type: "value"
       },
       series: [
         {
           data: [820, 932, 901, 934, 1290, 1330, 1320],
-          type: 'line',
+          type: "line",
           areaStyle: {}
         }
       ]
@@ -37,7 +32,6 @@ Page({
       option: option as any
     });
   },
- 
-  onShareAppMessage() {
-  }
-})
+
+  onShareAppMessage() {}
+});

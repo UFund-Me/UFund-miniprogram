@@ -1,3 +1,3 @@
-<view>
-  <ec-canvas style="width: 100vw; height: 40vh;" id="ec-charts" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+<view style="width: {{width}}rpx; height: {{height}}rpx; padding: {{padding}}rpx;">
+  <ec-canvas id="ec-charts" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
 </view>

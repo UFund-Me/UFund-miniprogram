@@ -1,10 +1,25 @@
-import {  ECharts, EChartsComponent } from 'echarts';
+import { ECharts, EChartsComponent } from "echarts";
 
 // @ts-ignore
-import * as echarts from '../../lib/ec-canvas/echarts';
+import * as echarts from "../../lib/ec-canvas/echarts";
 
 Component({
   properties: {
+    width: {
+      type: Number,
+      value: 750
+    },
+
+    height: {
+      type: Number,
+      value: 400
+    },
+
+    padding: {
+      type: Number,
+      value: 0
+    },
+
     option: {
       type: Object,
       value: {}
@@ -12,7 +27,7 @@ Component({
   },
 
   observers: {
-    'option': function() {
+    option: function () {
       if (!this.data.isLoaded) return;
 
       this.updateChart();
@@ -34,7 +49,7 @@ Component({
 
   lifetimes: {
     attached() {
-      this.ecComponent = this.selectComponent('#ec-charts') as any;
+      this.ecComponent = this.selectComponent("#ec-charts") as any;
       this.initialize();
     }
   },
@@ -46,37 +61,36 @@ Component({
       if (!ecComponent) return;
 
       ecComponent.init((canvas: any, width: any, height: any, dpr: any) => {
-        console.log('11111111111111', canvas, width, height, dpr)
-
         const chart = echarts.init(canvas, null, {
-          width: width,
-          height: height,
+          width: 750,
+          height: 400,
           devicePixelRatio: dpr // new
         }) as ECharts;
-  
+
         this.chart = chart as any;
 
-        this.setData({
-          isLoaded: true,
-          isDisposed: false
-        }, () => {
-          this.updateChart();
-        });
+        this.setData(
+          {
+            isLoaded: true,
+            isDisposed: false
+          },
+          () => {
+            this.updateChart();
+          }
+        );
 
         // 注意这里一定要返回 chart 实例，否则会影响事件处理等
         return chart;
-      })
+      });
     },
-    
+
     updateChart() {
       const option = this.data.option;
       const chart = this.chart as unknown as ECharts;
 
-      console.log('11111111111111', chart, option)
-
       if (!chart || !option) return;
 
       chart.setOption(option);
-    },
+    }
   }
-})
+});
