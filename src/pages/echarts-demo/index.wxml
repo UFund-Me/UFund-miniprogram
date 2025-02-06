@@ -1,4 +1,6 @@
 <!-- index.wxml -->
 <view class="container">
-  <ec-charts padding="{{ 10 }}" option="{{ option }}"></ec-charts>
+  <view style="padding-left: 30rpx;">
+    <ec-charts width="720" height="400" option="{{ option }}"></ec-charts>
+  </view>
 </view>

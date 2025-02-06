@@ -15,11 +15,6 @@ Component({
       value: 400
     },
 
-    padding: {
-      type: Number,
-      value: 0
-    },
-
     option: {
       type: Object,
       value: {}
@@ -62,8 +57,8 @@ Component({
 
       ecComponent.init((canvas: any, width: any, height: any, dpr: any) => {
         const chart = echarts.init(canvas, null, {
-          width: 750,
-          height: 400,
+          width: width,
+          height: height,
           devicePixelRatio: dpr // new
         }) as ECharts;
 
