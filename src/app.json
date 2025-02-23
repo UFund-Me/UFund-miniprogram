@@ -1,9 +1,5 @@
 {
-  "pages": [
-    "pages/echarts-demo/index",
-    "pages/stock-index/index",
-    "pages/stock-quotes/index"
-  ],
+  "pages": ["pages/stock-index/index", "pages/stock-quotes/index"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EDEDED",
@@ -24,10 +20,6 @@
     "color": "#8a8a8a",
     "selectedColor": "#f85a57",
     "list": [
-      {
-        "pagePath": "pages/echarts-demo/index",
-        "text": "Echarts"
-      },
       {
         "pagePath": "pages/stock-index/index",
         "text": "指数",

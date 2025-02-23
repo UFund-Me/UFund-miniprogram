@@ -13,39 +13,39 @@
             <view class="code">{{ item.code }}</view>
           </view>
           <view class="right">
-            <view class="new-price {{ util.getPriceClass(item.latest.newPrice, item.latest.preClosePrice) }}">
-              {{ item.latest.newPrice }}
+            <view class="new-price {{ util.getPriceClass(item.newPrice, item.preClosePrice) }}">
+              {{ item.newPrice }}
             </view>
             <view class="change-info">
-              <span class="change-info-item {{ util.getPriceClass(item.latest.newPrice, item.latest.preClosePrice) }}">
-                {{ item.latest.upsDowns }}
+              <span class="change-info-item {{ util.getPriceClass(item.newPrice, item.preClosePrice) }}">
+                {{ item.upsDowns }}
               </span>
-              <span class="change-info-item {{ util.getPriceClass(item.latest.newPrice, item.latest.preClosePrice) }}">
-                {{ item.latest.changeRate }}
+              <span class="change-info-item {{ util.getPriceClass(item.newPrice, item.preClosePrice) }}">
+                {{ item.changeRate }}
               </span>
             </view>
           </view>
         </view>
         <view class="change-info-list">
           <view class="change-info-row">
-            <span class="change-info-item {{ util.getPriceClass(item.latest.openPrice, item.latest.preClosePrice) }}">
-              今开: {{ item.latest.openPrice }}
+            <span class="change-info-item {{ util.getPriceClass(item.openPrice, item.preClosePrice) }}">
+              今开: {{ item.openPrice }}
             </span>
-            <span class="change-info-item {{ util.getPriceClass(item.latest.preClosePrice, item.latest.preClosePrice) }}">
-              昨收: {{ item.latest.preClosePrice }}
-            </span>
-          </view>
-          <view class="change-info-row">
-            <span class="change-info-item {{ util.getPriceClass(item.latest.highPrice, item.latest.preClosePrice) }}">
-              最高: {{ item.latest.highPrice }}
-            </span>
-            <span class="change-info-item {{ util.getPriceClass(item.latest.lowPrice, item.latest.preClosePrice) }}">
-              最低: {{ item.latest.lowPrice }}
+            <span class="change-info-item {{ util.getPriceClass(item.preClosePrice, item.preClosePrice) }}">
+              昨收: {{ item.preClosePrice }}
             </span>
           </view>
           <view class="change-info-row">
-            <span class="change-info-item">换手: {{ item.latest.turnoverRate }}</span>
-            <text class="change-info-item">振幅: {{ item.latest.amplitude }}</text>
+            <span class="change-info-item {{ util.getPriceClass(item.highPrice, item.preClosePrice) }}">
+              最高: {{ item.highPrice }}
+            </span>
+            <span class="change-info-item {{ util.getPriceClass(item.lowPrice, item.preClosePrice) }}">
+              最低: {{ item.lowPrice }}
+            </span>
+          </view>
+          <view class="change-info-row">
+            <span class="change-info-item">换手: {{ item.turnoverRate }}</span>
+            <text class="change-info-item">振幅: {{ item.amplitude }}</text>
           </view>
         </view>
       </van-collapse-item>

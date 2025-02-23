@@ -1,13 +1,12 @@
-import { StockIndex } from "stock";
+import { StockIndexQuotes } from "stock";
 
 import Toast from "@vant/weapp/toast/toast";
-import { getStockIndex } from "../../api/stock";
-
+import { getStockIndexQuotes } from "../../api/stock";
 
 Page({
   data: {
     // 指数列表
-    list: [] as StockIndex[],
+    list: [] as StockIndexQuotes[],
     // 当前选中的指数
     activeCodes: [] as string[]
   },
@@ -27,7 +26,7 @@ Page({
       forbidClick: true
     });
 
-    getStockIndex().then((res) => {
+    getStockIndexQuotes().then(res => {
       if (!res.success) {
         Toast.fail("获取指数失败");
       }
